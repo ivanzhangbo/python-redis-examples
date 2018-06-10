@@ -1,11 +1,6 @@
-FROM google/debian:wheezy
-MAINTAINER Joe Beda <joe.github@bedafamily.com>
+FROM python:3
 
-RUN apt-get update && \
-    apt-get install -y python-dev python-pip && \
-    pip install redis flask
-
-ADD app /app
+RUN pip install redis flask
 
 EXPOSE 80
 
